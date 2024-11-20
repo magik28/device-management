@@ -19,6 +19,7 @@ payload:
       multiple: false
       devicechannel: true
       userchannel: true
+      supervised: false
       requiresdep: false
       userapprovedmdm: false
       allowmanualinstall: true

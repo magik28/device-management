@@ -25,6 +25,7 @@ payload:
       accessrights: AllowInspection
       devicechannel: true
       userchannel: true
+      supervised: false
       requiresdep: false
       userenrollment:
         mode: allowed

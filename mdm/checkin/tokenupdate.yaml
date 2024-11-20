@@ -17,6 +17,7 @@ payload:
       introduced: '10.7'
       devicechannel: true
       userchannel: true
+      supervised: false
       requiresdep: false
       userenrollment:
         mode: allowed

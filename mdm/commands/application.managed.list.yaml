@@ -22,6 +22,8 @@ payload:
       accessrights: AllowAppInstallation
       devicechannel: true
       userchannel: true
+      supervised: false
+      requiresdep: false
       userenrollment:
         mode: allowed
     tvOS:

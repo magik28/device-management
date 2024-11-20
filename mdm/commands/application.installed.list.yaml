@@ -19,6 +19,7 @@ payload:
       accessrights: AllowQueryApplications
       devicechannel: true
       userchannel: true
+      supervised: false
       requiresdep: false
       userenrollment:
         mode: forbidden

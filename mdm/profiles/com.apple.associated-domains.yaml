@@ -11,6 +11,7 @@ payload:
       multiple: true
       devicechannel: true
       userchannel: true
+      supervised: false
       requiresdep: false
       userapprovedmdm: true
       allowmanualinstall: true

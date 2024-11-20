@@ -10,6 +10,7 @@ payload:
       accessrights: QueryInstalledApps
       devicechannel: false
       userchannel: true
+      supervised: false
       requiresdep: false
       userenrollment:
         mode: forbidden

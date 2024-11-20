@@ -2,6 +2,10 @@
 
 This document lists errata for the YAML schema. This is used when older versions of the schema are incorrect, and a fix was made in later schema to correct the problem.
 
+## macOS 15.2
+
+Added missing supervised key to macOS across profiles and commands
+
 ## iOS 18.1 / macOS 15.1
 
 ### mdm/profiles/com.apple.applicationaccess.yaml

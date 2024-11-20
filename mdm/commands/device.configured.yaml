@@ -20,6 +20,7 @@ payload:
       accessrights: None
       devicechannel: true
       userchannel: false
+      supervised: false
       requiresdep: true
       userenrollment:
         mode: forbidden

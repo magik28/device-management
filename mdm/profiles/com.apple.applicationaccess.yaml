@@ -19,6 +19,7 @@ payload:
       multiple: true
       devicechannel: true
       userchannel: true
+      supervised: false
       requiresdep: false
       userapprovedmdm: false
       allowmanualinstall: true
@@ -491,6 +492,8 @@ payloadkeys:
     iOS:
       introduced: '17.4'
       supervised: true
+      sharedipad:
+        mode: forbidden
       userenrollment:
         mode: forbidden
     macOS:
@@ -620,7 +623,9 @@ payloadkeys:
       userenrollment:
         mode: forbidden
     macOS:
-      introduced: n/a
+      introduced: '15.0'
+      userenrollment:
+        mode: forbidden
     tvOS:
       introduced: n/a
     visionOS:
@@ -640,7 +645,9 @@ payloadkeys:
       userenrollment:
         mode: forbidden
     macOS:
-      introduced: n/a
+      introduced: '15.0'
+      userenrollment:
+        mode: forbidden
     tvOS:
       introduced: '11.3'
       deprecated: '17.0'
@@ -996,6 +1003,8 @@ payloadkeys:
     visionOS:
       introduced: '2.0'
       supervised: true
+      userenrollment:
+        mode: forbidden
     watchOS:
       introduced: n/a
   type: <boolean>
@@ -1079,6 +1088,9 @@ payloadkeys:
       introduced: n/a
     visionOS:
       introduced: '2.2'
+      supervised: true
+      userenrollment:
+        mode: forbidden
     watchOS:
       introduced: n/a
   type: <boolean>
@@ -1387,7 +1399,9 @@ payloadkeys:
       userenrollment:
         mode: forbidden
     macOS:
-      introduced: n/a
+      introduced: '15.0'
+      userenrollment:
+        mode: forbidden
     tvOS:
       introduced: '11.3'
       supervised: true
@@ -1408,11 +1422,11 @@ payloadkeys:
   supportedOS:
     iOS:
       introduced: '18.2'
-      supervised: true
+      supervised: false
       sharedipad:
         mode: forbidden
       userenrollment:
-        mode: forbidden
+        mode: allowed
     macOS:
       introduced: '15.2'
       userenrollment:
@@ -1427,7 +1441,9 @@ payloadkeys:
   presence: optional
   default: true
   content: If false, disables the use of external, cloud-based intelligence services
-    with Siri.
+    with Siri. On iOS, this restriction is temporarily allowed on unsupervised and
+    user enrollments. In a future release, this restriction will require supervision,
+    and will be ignored on non-supervised devices.
 - key: allowExternalIntelligenceIntegrationsSignIn
   title: Allow external intelligence integrations sign-in
   supportedOS:
@@ -1453,7 +1469,8 @@ payloadkeys:
   default: true
   content: If false, forces external intelligence providers into anonymous mode. If
     a user is already signed in to an external intelligence provider, applying this
-    restriction will cause them to be signed out.
+    restriction will cause them to be signed out when the next ChatGPT request is
+    attempted.
 - key: allowFileSharingModification
   title: Allow modifying File Sharing setting
   supportedOS:
@@ -3097,6 +3114,8 @@ payloadkeys:
       introduced: n/a
     visionOS:
       introduced: '1.1'
+      userenrollment:
+        mode: forbidden
     watchOS:
       introduced: n/a
   type: <boolean>
@@ -4000,7 +4019,9 @@ payloadkeys:
       userenrollment:
         mode: forbidden
     macOS:
-      introduced: n/a
+      introduced: '15.0'
+      userenrollment:
+        mode: forbidden
     tvOS:
       introduced: '11.3'
     visionOS:
@@ -4030,7 +4051,9 @@ payloadkeys:
       userenrollment:
         mode: forbidden
     macOS:
-      introduced: n/a
+      introduced: '15.0'
+      userenrollment:
+        mode: forbidden
     tvOS:
       introduced: '11.3'
     visionOS:
@@ -4082,7 +4105,9 @@ payloadkeys:
       userenrollment:
         mode: forbidden
     macOS:
-      introduced: n/a
+      introduced: '15.0'
+      userenrollment:
+        mode: forbidden
     tvOS:
       introduced: '11.3'
     visionOS:
